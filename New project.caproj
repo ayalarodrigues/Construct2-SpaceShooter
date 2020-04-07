@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>720</width>
+        <height>1280</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="playerShip1_blue" sid="650154486968025">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="711764537237851">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="416153035104873">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="863271436078440" speed="5">
+                    <frame duration="1" hotspotX="0.493333" hotspotY="0.50505" original-source="C:\Users\rodri\Documents\freebundle\Sprites\Space shooter\playerShip1_blue.png">
+                        <collision-poly>
+                            <point x="0.6" y="0.30303" />
+                            <point x="1" y="0.494949" />
+                            <point x="0.6" y="0.69697" />
+                            <point x="0.506667" y="0.989899" />
+                            <point x="0.186667" y="0.858586" />
+                            <point x="0" y="0.494949" />
+                            <point x="0.186667" y="0.141414" />
+                            <point x="0.506667" y="0.010101" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enemyBlack" sid="723627185036088">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="710411900891188">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="621587392696616">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="315610734233399">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312307441391550" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.494624" original-source="C:\Users\rodri\Documents\freebundle\Sprites\Space shooter\Enemies\enemyBlack1.png">
+                        <collision-poly>
+                            <point x="0.119048" y="0.892473" />
+                            <point x="0.22619" y="0.505376" />
+                            <point x="0.119048" y="0.107527" />
+                            <point x="0.5" y="0.0645161" />
+                            <point x="0.809524" y="0.172043" />
+                            <point x="0.690476" y="0.505376" />
+                            <point x="0.809524" y="0.827957" />
+                            <point x="0.5" y="0.935484" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="laserBlue" sid="583176388427667">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="419798584466089">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="710962466033710">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="218831393910200" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.555556" original-source="C:\Users\rodri\Documents\freebundle\Sprites\Space shooter\Lasers\laserBlue01.png">
+                        <collision-poly>
+                            <point x="0.981481" y="0.111111" />
+                            <point x="1" y="0.444444" />
+                            <point x="0.981481" y="0.888889" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.0555556" y="0.666667" />
+                            <point x="0" y="0.444444" />
+                            <point x="0.0555556" y="0.333333" />
+                            <point x="0.5" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="laserRed" sid="189609394737080">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="207662739671278">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="652498920259603">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814092847969135" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.555556" original-source="C:\Users\rodri\Documents\freebundle\Sprites\Space shooter\Lasers\laserRed01.png">
+                        <collision-poly>
+                            <point x="0.981481" y="0.111111" />
+                            <point x="1" y="0.444444" />
+                            <point x="0.981481" y="0.888889" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.0555556" y="0.666667" />
+                            <point x="0" y="0.444444" />
+                            <point x="0.0555556" y="0.333333" />
+                            <point x="0.5" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="meteorBrown_big" sid="282740692257112">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="950391158129697">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="306931647974487">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="745854375233303">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268496941375662" speed="5">
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\rodri\Documents\freebundle\Sprites\Space shooter\Meteors\meteorBrown_big3.png">
+                        <collision-poly>
+                            <point x="0.146067" y="0.158537" />
+                            <point x="0.494382" y="0.0487805" />
+                            <point x="0.831461" y="0.182927" />
+                            <point x="1" y="0.5" />
+                            <point x="0.831461" y="0.817073" />
+                            <point x="0.494382" y="0.963415" />
+                            <point x="0.134831" y="0.853659" />
+                            <point x="0.011236" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtpontos" sid="884447970060381">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txtvida" sid="180577872835902">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="quantidadedevida" sid="937381552038231">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="quantidadedepontos" sid="868176553338401">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Keyboard" sid="646398910309066">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="TiledBackground" sid="497433145353937">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground2" sid="602162390229534">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\rodri\Documents\freebundle\Sprites\Space\Backgrounds\Background1.png" />
+        </object-type>
+        <object-type name="Audio" sid="330418940230059">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="9" />
+        <global-instance type="Audio" uid="11">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Lazer Fire 1.m4a" />
+        <file name="Lazer Fire 1.ogg" />
+        <file name="RetroLaser1.m4a" />
+        <file name="RetroLaser1.ogg" />
+        <file name="Explosion 3.m4a" />
+        <file name="Explosion 3.ogg" />
+        <file name="MattOglseby - 3.m4a" />
+    </sounds-folder>
+    <music-folder>
+        <file name="MattOglseby - 1.m4a" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

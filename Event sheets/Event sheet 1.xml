@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="pontos" sid="632534581830342" static="0" type="number">0</variable>
+        <variable constant="0" name="vida" sid="297249942179530" static="0" type="number">5</variable>
+        <event-group description="" sid="352128067797800" title="Sistema">
+            <sub-events>
+                <event-block sid="110688369068139">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="111209901908423" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="243715034351002" type="quantidadedepontos">
+                            <param id="0" name="Text">pontos</param>
+                        </action>
+                        <action id="0" name="Set text" sid="785407448999154" type="quantidadedevida">
+                            <param id="0" name="Text">vida</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="924049695873865">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="670675074247252" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="748753997732440" type="playerShip1_blue" />
+                        <action id="-16" name="Wait" sid="990348559400426" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="870824126041316" type="System" />
+                        <action id="-21" name="Reset global variables" sid="212280494767730" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="847209391648014">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="312844253644403" type="System">
+                            <param id="0" name="Interval (seconds)">random(0.5, 2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="549978186683309" type="enemyBlack">
+                            <param id="0" name="Object">laserRed</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="797792428031294">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="449469820042876" type="System">
+                            <param id="0" name="Interval (seconds)">random(1,5)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="773953490813414" type="System">
+                            <param id="0" name="Object to create">enemyBlack</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(50, 680)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="619154264723297">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="693700967365389" type="System">
+                            <param id="0" name="Interval (seconds)">random(5, 15)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="537715313197246" type="System">
+                            <param id="0" name="Object to create">meteorBrown_big</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(50, 680)</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="535547321083962" title="Heroi">
+            <sub-events>
+                <event-block sid="194788817080380">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="634992161940938" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="287140291490226" type="playerShip1_blue">
+                            <param id="0" name="Object">laserBlue</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="154037908533873" type="Audio">
+                            <param id="0" name="Audio file">Lazer Fire 1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="501219697256301">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="938987930006951" type="laserBlue">
+                            <param id="0" name="Object">enemyBlack</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="697606190157611" type="enemyBlack" />
+                        <action id="-10" name="Add to" sid="864400352037310" type="System">
+                            <param id="0" name="Variable">pontos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="475409697298232" type="laserBlue" />
+                        <action id="0" name="Play" sid="789186910819929" type="Audio">
+                            <param id="0" name="Audio file">RetroLaser1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="951361791190770" title="Inimigo">
+            <sub-events>
+                <event-block sid="743231878980818">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="416833392433877" type="laserRed">
+                            <param id="0" name="Object">playerShip1_blue</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="834230674628737" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="699962985672480" type="laserRed" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="604688744885702" title="Meteoro da paixão">
+            <sub-events>
+                <event-block sid="332495417899049">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="298707624328642" type="meteorBrown_big">
+                            <param id="0" name="Object">playerShip1_blue</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="631384229088477" type="playerShip1_blue" />
+                        <action id="-11" name="Subtract from" sid="189762623734120" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="0" name="Play" sid="754663916177238" type="Audio">
+                            <param id="0" name="Audio file">Explosion 3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="280955995241585">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="812237435498643" type="meteorBrown_big">
+                            <param id="0" name="Object">enemyBlack</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="722523426926757" type="enemyBlack" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="209937066578504">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="846848066586726" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="274104010286110" type="Audio">
+                    <param id="0" name="Audio file">Explosion 3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
